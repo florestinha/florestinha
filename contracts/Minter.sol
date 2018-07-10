@@ -6,14 +6,14 @@ Published at:
 
 pragma solidity ^0.4.11;
 
-import "./ProsperaToken.sol";
+import "./FlorestinhaToken.sol";
 import "./Owned.sol";
 
 contract Minter is Owned {
 
   uint256 public lastMintingTime = 0;
   uint256 public lastMintingAmount;
-  ProsperaToken public prosperaToken;
+  FlorestinhaToken public florestinhaToken;
 
   modifier allowedMinting() {
     if (block.timestamp >= lastMintingTime + 30 days) {
@@ -23,7 +23,7 @@ contract Minter is Owned {
 
   function Minter (uint256 _lastMintingAmount, address _ownerContract) public {
     lastMintingAmount = _lastMintingAmount;
-    prosperaToken = ProsperaToken(_ownerContract);
+    florestinhaToken = FlorestinhaToken(_ownerContract);
   }
 
   // increases 2.95% from last minting
@@ -34,12 +34,12 @@ contract Minter is Owned {
   function updateMintingStatus(uint256 _mintedAmount) internal {
     lastMintingAmount = _mintedAmount;
     lastMintingTime = block.timestamp;
-    prosperaToken.incrementTotalSupply(_mintedAmount);
+    florestinhaToken.incrementTotalSupply(_mintedAmount);
   }
 
   function mint() onlyOwner public returns (bool success) {
     uint256 value = calculateMintAmount();
-    prosperaToken.mintToAccount(msg.sender, value);
+    florestinhaToken.mintToAccount(msg.sender, value);
     updateMintingStatus(value);
     return true;
   }

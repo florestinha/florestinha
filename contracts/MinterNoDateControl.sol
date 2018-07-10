@@ -6,7 +6,7 @@ Published at:
 
 pragma solidity ^0.4.16;
 
-import "./ProsperaToken.sol";
+import "./FlorestinhaToken.sol";
 import "./Owned.sol";
 import "./DateTime.sol";
 
@@ -16,7 +16,7 @@ import "./DateTime.sol";
 */
 contract Minter is Owned {
 
-  ProsperaToken public prosperaToken;
+ FlorestinhaToken public florestinhaToken;
   DateTime public dateTimeContract;
 
   uint256 public lastMintingAmount;
@@ -25,7 +25,7 @@ contract Minter is Owned {
   function Minter (address _ownerContract,
                    uint256 _lastMintingAmount,
                    address _dateTimeContract) public {
-    prosperaToken = ProsperaToken(_ownerContract);
+    florestinhaToken = FlorestinhaToken(_ownerContract);
     lastMintingAmount = _lastMintingAmount;
     dateTimeContract = DateTime(_dateTimeContract);
 
@@ -39,8 +39,8 @@ contract Minter is Owned {
   function mint() onlyOwner public returns (bool success) {
     uint256 value = calculateMintAmount();
 
-    prosperaToken.mintToAccount(msg.sender, value);
-    prosperaToken.incrementTotalSupply(value);  
+    florestinhaToken.mintToAccount(msg.sender, value);
+    florestinhaToken.incrementTotalSupply(value);  
 
     lastMintingAmount = value;
     lastMintingPeriod++;

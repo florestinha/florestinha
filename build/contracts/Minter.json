@@ -1,8 +1,116 @@
 {
-  "contract_name": "Minter",
+  "contractName": "Minter",
   "abi": [
     {
+      "constant": true,
+      "inputs": [],
+      "name": "dateTimeContract",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastMintingAmount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "florestinhaToken",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
       "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [
+        {
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "lastMintingPeriod",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "_ownerContract",
+          "type": "address"
+        },
+        {
+          "name": "_lastMintingAmount",
+          "type": "uint256"
+        },
+        {
+          "name": "_dateTimeContract",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": true,
       "inputs": [],
       "name": "calculateMintAmount",
       "outputs": [
@@ -12,6 +120,7 @@
         }
       ],
       "payable": false,
+      "stateMutability": "view",
       "type": "function"
     },
     {
@@ -25,25 +134,2271 @@
         }
       ],
       "payable": false,
+      "stateMutability": "nonpayable",
       "type": "function"
-    },
-    {
-      "inputs": [
-        {
-          "name": "_lastMintingAmount",
-          "type": "uint256"
-        },
-        {
-          "name": "_ownerContract",
-          "type": "address"
-        }
-      ],
-      "payable": false,
-      "type": "constructor"
     }
   ],
-  "unlinked_binary": "0x60606040526000600055341561001157fe5b6040516040806102348339810160405280516020909101515b600182905560028054600160a060020a038316600160a060020a031991821681179092556003805490911690911790555b50505b6101c78061006d6000396000f300606060405263ffffffff60e060020a600035041663120e8f05811461002c5780631249c58b1461004e575bfe5b341561003457fe5b61003c610072565b60408051918252519081900360200190f35b341561005657fe5b61005e610088565b604080519115158252519081900360200190f35b60015460009061271090612837025b0490505b90565b60008054819062278d00014210610121576100a1610072565b6003546040805160006020918201819052825160e060020a63356e7e9d028152600160a060020a033381166004830152602482018790529351959650929093169363356e7e9d936044808501948390030190829087803b151561010057fe5b6102c65a03f1151561010e57fe5b5061011c9150829050610127565b600191505b5b5b5090565b6001819055426000908155600354604080516020908101849052815160e260020a633576f98d028152600481018690529151600160a060020a039093169363d5dbe634936024808501949192918390030190829087803b151561018657fe5b6102c65a03f1151561019457fe5b5050505b505600a165627a7a723058206509cee2a5a8cd07a529d9a5dd028c0c88ea82f06de42c5bd1d4b2edb57542b10029",
+  "bytecode": "0x6080604052600060045534801561001557600080fd5b506040516060806107d3833981018060405281019080805190602001909291908051906020019092919080519060200190929190505050336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555082600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055508160038190555080600260006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050506106ac806101276000396000f30060806040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063120e8f05146100935780631249c58b146100be578063205cd37b146100ed57806358d37dc514610144578063857de8fa1461016f5780638da5cb5b146101c6578063f2fde38b1461021d578063fb0cb1cc146102a0575b600080fd5b34801561009f57600080fd5b506100a86102cb565b6040518082815260200191505060405180910390f35b3480156100ca57600080fd5b506100d36102e6565b604051808215151515815260200191505060405180910390f35b3480156100f957600080fd5b5061010261053d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561015057600080fd5b50610159610563565b6040518082815260200191505060405180910390f35b34801561017b57600080fd5b50610184610569565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101d257600080fd5b506101db61058f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561022957600080fd5b5061025e600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105b4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102ac57600080fd5b506102b561067a565b6040518082815260200191505060405180910390f35b6000612710612837600354028115156102e057fe5b04905090565b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561034457600080fd5b61034c6102cb565b9050600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663356e7e9d33836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561041357600080fd5b505af1158015610427573d6000803e3d6000fd5b505050506040513d602081101561043d57600080fd5b810190808051906020019092919050505050600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663d5dbe634826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180828152602001915050602060405180830381600087803b1580156104e057600080fd5b505af11580156104f4573d6000803e3d6000fd5b505050506040513d602081101561050a57600080fd5b81019080805190602001909291905050505080600381905550600460008154809291906001019190505550600191505090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561061157600080fd5b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600454815600a165627a7a72305820f415b92834605d1fb661c20d48c67490de0385df88216b3de2d24349344f8eeb0029",
+  "deployedBytecode": "0x60806040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063120e8f05146100935780631249c58b146100be578063205cd37b146100ed57806358d37dc514610144578063857de8fa1461016f5780638da5cb5b146101c6578063f2fde38b1461021d578063fb0cb1cc146102a0575b600080fd5b34801561009f57600080fd5b506100a86102cb565b6040518082815260200191505060405180910390f35b3480156100ca57600080fd5b506100d36102e6565b604051808215151515815260200191505060405180910390f35b3480156100f957600080fd5b5061010261053d565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561015057600080fd5b50610159610563565b6040518082815260200191505060405180910390f35b34801561017b57600080fd5b50610184610569565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156101d257600080fd5b506101db61058f565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b34801561022957600080fd5b5061025e600480360381019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506105b4565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b3480156102ac57600080fd5b506102b561067a565b6040518082815260200191505060405180910390f35b6000612710612837600354028115156102e057fe5b04905090565b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561034457600080fd5b61034c6102cb565b9050600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663356e7e9d33836040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b15801561041357600080fd5b505af1158015610427573d6000803e3d6000fd5b505050506040513d602081101561043d57600080fd5b810190808051906020019092919050505050600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1663d5dbe634826040518263ffffffff167c010000000000000000000000000000000000000000000000000000000002815260040180828152602001915050602060405180830381600087803b1580156104e057600080fd5b505af11580156104f4573d6000803e3d6000fd5b505050506040513d602081101561050a57600080fd5b81019080805190602001909291905050505080600381905550600460008154809291906001019190505550600191505090565b600260009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60035481565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b60008060009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561061157600080fd5b816000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff169050919050565b600454815600a165627a7a72305820f415b92834605d1fb661c20d48c67490de0385df88216b3de2d24349344f8eeb0029",
+  "sourceMap": "350:940:3:-;;;531:1;496:36;;537:300;8:9:-1;5:2;;;30:1;27;20:12;5:2;537:300:3;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;109:10:4;101:5;;:18;;;;;;;;;;;;;;;;;;720:14:3;684:16;;:51;;;;;;;;;;;;;;;;;;761:18;741:17;:38;;;;813:17;785:16;;:46;;;;;;;;;;;;;;;;;;537:300;;;350:940;;;;;;",
+  "deployedSourceMap": "350:940:3:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;880:117;;8:9:-1;5:2;;;30:1;27;20:12;5:2;880:117:3;;;;;;;;;;;;;;;;;;;;;;;1001:287;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1001:287:3;;;;;;;;;;;;;;;;;;;;;;;;;;;423:32;;8:9:-1;5:2;;;30:1;27;20:12;5:2;423:32:3;;;;;;;;;;;;;;;;;;;;;;;;;;;460;;8:9:-1;5:2;;;30:1;27;20:12;5:2;460:32:3;;;;;;;;;;;;;;;;;;;;;;;379:40;;8:9:-1;5:2;;;30:1;27;20:12;5:2;379:40:3;;;;;;;;;;;;;;;;;;;;;;;;;;;47:20:4;;8:9:-1;5:2;;;30:1;27;20:12;5:2;47:20:4;;;;;;;;;;;;;;;;;;;;;;;;;;;215:135;;8:9:-1;5:2;;;30:1;27;20:12;5:2;215:135:4;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;496:36:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;496:36:3;;;;;;;;;;;;;;;;;;;;;;;880:117;932:14;987:5;979;959:17;;:25;:33;;;;;;;;952:40;;880:117;:::o;1001:287::-;1043:12;1063:13;179:5:4;;;;;;;;;;;165:19;;:10;:19;;;;161:30;;;186:5;;;161:30;1079:21:3;:19;:21::i;:::-;1063:37;;1107:16;;;;;;;;;;;:30;;;1138:10;1150:5;1107:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1107:49:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1107:49:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1107:49:3;;;;;;;;;;;;;;;;;1162:16;;;;;;;;;;;:37;;;1200:5;1162:44;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1162:44:3;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;1162:44:3;;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1162:44:3;;;;;;;;;;;;;;;;;1235:5;1215:17;:25;;;;1246:17;;:19;;;;;;;;;;;;;1279:4;1272:11;;1001:287;;:::o;423:32::-;;;;;;;;;;;;;:::o;460:::-;;;;:::o;379:40::-;;;;;;;;;;;;;:::o;47:20:4:-;;;;;;;;;;;;;:::o;215:135::-;279:14;179:5;;;;;;;;;;;165:19;;:10;:19;;;;161:30;;;186:5;;;161:30;313:8;305:5;;:16;;;;;;;;;;;;;;;;;;338:5;;;;;;;;;;;331:12;;215:135;;;:::o;496:36:3:-;;;;:::o",
+  "source": "/*\nPublished at:\n1. 0xAfb1ae4D14e842CacFE44c1911a0b4542D54595c\n2. 0xab705e15925d411dafc5927b7803c9da54e50334\n*/\n\npragma solidity ^0.4.16;\n\nimport \"./FlorestinhaToken.sol\";\nimport \"./Owned.sol\";\nimport \"./DateTime.sol\";\n\n\n/* constructor params\n\"0x08970fed061e7747cd9a38d680a601510cb659fb\", 36139470081, \"0x9dd1e8169e76a9226b07ab9f85cc20a5e1ed44dd\"\n*/\ncontract Minter is Owned {\n\n FlorestinhaToken public florestinhaToken;\n  DateTime public dateTimeContract;\n\n  uint256 public lastMintingAmount;\n  uint256 public lastMintingPeriod = 0;\n\n  function Minter (address _ownerContract,\n                   uint256 _lastMintingAmount,\n                   address _dateTimeContract) public {\n    florestinhaToken = FlorestinhaToken(_ownerContract);\n    lastMintingAmount = _lastMintingAmount;\n    dateTimeContract = DateTime(_dateTimeContract);\n\n  }\n\n  // increases 2.95% from last minting\n  function calculateMintAmount() public view returns (uint256 amount){\n   return lastMintingAmount * 10295 / 10000;\n  }\n\n  function mint() onlyOwner public returns (bool success) {\n    uint256 value = calculateMintAmount();\n\n    florestinhaToken.mintToAccount(msg.sender, value);\n    florestinhaToken.incrementTotalSupply(value);  \n\n    lastMintingAmount = value;\n    lastMintingPeriod++;\n\n    return true;\n  }\n}\n",
+  "sourcePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/MinterNoDateControl.sol",
+  "ast": {
+    "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/MinterNoDateControl.sol",
+    "exportedSymbols": {
+      "Minter": [
+        1208
+      ]
+    },
+    "id": 1209,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1119,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "113:24:3"
+      },
+      {
+        "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/FlorestinhaToken.sol",
+        "file": "./FlorestinhaToken.sol",
+        "id": 1120,
+        "nodeType": "ImportDirective",
+        "scope": 1209,
+        "sourceUnit": 1014,
+        "src": "139:32:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/Owned.sol",
+        "file": "./Owned.sol",
+        "id": 1121,
+        "nodeType": "ImportDirective",
+        "scope": 1209,
+        "sourceUnit": 1249,
+        "src": "172:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/DateTime.sol",
+        "file": "./DateTime.sol",
+        "id": 1122,
+        "nodeType": "ImportDirective",
+        "scope": 1209,
+        "sourceUnit": 768,
+        "src": "194:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1123,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1248,
+              "src": "369:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$1248",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 1124,
+            "nodeType": "InheritanceSpecifier",
+            "src": "369:5:3"
+          }
+        ],
+        "contractDependencies": [
+          1248
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1208,
+        "linearizedBaseContracts": [
+          1208,
+          1248
+        ],
+        "name": "Minter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1126,
+            "name": "florestinhaToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "379:40:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+              "typeString": "contract FlorestinhaToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1125,
+              "name": "FlorestinhaToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1013,
+              "src": "379:16:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                "typeString": "contract FlorestinhaToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1128,
+            "name": "dateTimeContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "423:32:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_DateTime_$767",
+              "typeString": "contract DateTime"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1127,
+              "name": "DateTime",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 767,
+              "src": "423:8:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DateTime_$767",
+                "typeString": "contract DateTime"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1130,
+            "name": "lastMintingAmount",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "460:32:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1129,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "460:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1133,
+            "name": "lastMintingPeriod",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "496:36:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1131,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "496:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 1132,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "531:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1158,
+              "nodeType": "Block",
+              "src": "678:159:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1142,
+                      "name": "florestinhaToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1126,
+                      "src": "684:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                        "typeString": "contract FlorestinhaToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1144,
+                          "name": "_ownerContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1135,
+                          "src": "720:14:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1143,
+                        "name": "FlorestinhaToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1013,
+                        "src": "703:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FlorestinhaToken_$1013_$",
+                          "typeString": "type(contract FlorestinhaToken)"
+                        }
+                      },
+                      "id": 1145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "703:32:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                        "typeString": "contract FlorestinhaToken"
+                      }
+                    },
+                    "src": "684:51:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                      "typeString": "contract FlorestinhaToken"
+                    }
+                  },
+                  "id": 1147,
+                  "nodeType": "ExpressionStatement",
+                  "src": "684:51:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1148,
+                      "name": "lastMintingAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1130,
+                      "src": "741:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1149,
+                      "name": "_lastMintingAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1137,
+                      "src": "761:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "741:38:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1151,
+                  "nodeType": "ExpressionStatement",
+                  "src": "741:38:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1152,
+                      "name": "dateTimeContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1128,
+                      "src": "785:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DateTime_$767",
+                        "typeString": "contract DateTime"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1154,
+                          "name": "_dateTimeContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1139,
+                          "src": "813:17:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1153,
+                        "name": "DateTime",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 767,
+                        "src": "804:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_DateTime_$767_$",
+                          "typeString": "type(contract DateTime)"
+                        }
+                      },
+                      "id": 1155,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "804:27:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DateTime_$767",
+                        "typeString": "contract DateTime"
+                      }
+                    },
+                    "src": "785:46:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DateTime_$767",
+                      "typeString": "contract DateTime"
+                    }
+                  },
+                  "id": 1157,
+                  "nodeType": "ExpressionStatement",
+                  "src": "785:46:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1159,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Minter",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1140,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1135,
+                  "name": "_ownerContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1159,
+                  "src": "554:22:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "554:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1137,
+                  "name": "_lastMintingAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1159,
+                  "src": "597:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "597:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1139,
+                  "name": "_dateTimeContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1159,
+                  "src": "644:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1138,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "644:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "553:117:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1141,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "678:0:3"
+            },
+            "scope": 1208,
+            "src": "537:300:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1170,
+              "nodeType": "Block",
+              "src": "947:50:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1168,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1166,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 1164,
+                        "name": "lastMintingAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1130,
+                        "src": "959:17:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "*",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "3130323935",
+                        "id": 1165,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "979:5:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10295_by_1",
+                          "typeString": "int_const 10295"
+                        },
+                        "value": "10295"
+                      },
+                      "src": "959:25:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "/",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "3130303030",
+                      "id": 1167,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "987:5:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10000_by_1",
+                        "typeString": "int_const 10000"
+                      },
+                      "value": "10000"
+                    },
+                    "src": "959:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1163,
+                  "id": 1169,
+                  "nodeType": "Return",
+                  "src": "952:40:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1171,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "calculateMintAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "908:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1162,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1171,
+                  "src": "932:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1161,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "932:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "931:16:3"
+            },
+            "scope": 1208,
+            "src": "880:117:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1206,
+              "nodeType": "Block",
+              "src": "1057:231:3",
+              "statements": [
+                {
+                  "assignments": [
+                    1179
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1179,
+                      "name": "value",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1207,
+                      "src": "1063:13:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1178,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1063:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1182,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1180,
+                      "name": "calculateMintAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1171,
+                      "src": "1079:19:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view returns (uint256)"
+                      }
+                    },
+                    "id": 1181,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1079:21:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1063:37:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1186,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1512,
+                          "src": "1138:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1187,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1138:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1188,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1179,
+                        "src": "1150:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1183,
+                        "name": "florestinhaToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1126,
+                        "src": "1107:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                          "typeString": "contract FlorestinhaToken"
+                        }
+                      },
+                      "id": 1185,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mintToAccount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 996,
+                      "src": "1107:30:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 1189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1107:49:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1190,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1107:49:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1194,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1179,
+                        "src": "1200:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1191,
+                        "name": "florestinhaToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1126,
+                        "src": "1162:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                          "typeString": "contract FlorestinhaToken"
+                        }
+                      },
+                      "id": 1193,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "incrementTotalSupply",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1012,
+                      "src": "1162:37:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 1195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1162:44:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1162:44:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1199,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1197,
+                      "name": "lastMintingAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1130,
+                      "src": "1215:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1198,
+                      "name": "value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1179,
+                      "src": "1235:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1215:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1200,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1215:25:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1202,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1246:19:3",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 1201,
+                      "name": "lastMintingPeriod",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1133,
+                      "src": "1246:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1203,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1246:19:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1204,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1279:4:3",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1177,
+                  "id": 1205,
+                  "nodeType": "Return",
+                  "src": "1272:11:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1207,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1174,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1173,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1231,
+                  "src": "1017:9:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1017:9:3"
+              }
+            ],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1014:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1176,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1207,
+                  "src": "1043:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1175,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1043:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1042:14:3"
+            },
+            "scope": 1208,
+            "src": "1001:287:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1209,
+        "src": "350:940:3"
+      }
+    ],
+    "src": "113:1178:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/MinterNoDateControl.sol",
+    "exportedSymbols": {
+      "Minter": [
+        1208
+      ]
+    },
+    "id": 1209,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1119,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".16"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "113:24:3"
+      },
+      {
+        "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/FlorestinhaToken.sol",
+        "file": "./FlorestinhaToken.sol",
+        "id": 1120,
+        "nodeType": "ImportDirective",
+        "scope": 1209,
+        "sourceUnit": 1014,
+        "src": "139:32:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/Owned.sol",
+        "file": "./Owned.sol",
+        "id": 1121,
+        "nodeType": "ImportDirective",
+        "scope": 1209,
+        "sourceUnit": 1249,
+        "src": "172:21:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/Dax/Projetos/Ethereum/florestinha-token/contracts/DateTime.sol",
+        "file": "./DateTime.sol",
+        "id": 1122,
+        "nodeType": "ImportDirective",
+        "scope": 1209,
+        "sourceUnit": 768,
+        "src": "194:24:3",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 1123,
+              "name": "Owned",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1248,
+              "src": "369:5:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Owned_$1248",
+                "typeString": "contract Owned"
+              }
+            },
+            "id": 1124,
+            "nodeType": "InheritanceSpecifier",
+            "src": "369:5:3"
+          }
+        ],
+        "contractDependencies": [
+          1248
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 1208,
+        "linearizedBaseContracts": [
+          1208,
+          1248
+        ],
+        "name": "Minter",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 1126,
+            "name": "florestinhaToken",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "379:40:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+              "typeString": "contract FlorestinhaToken"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1125,
+              "name": "FlorestinhaToken",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 1013,
+              "src": "379:16:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                "typeString": "contract FlorestinhaToken"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1128,
+            "name": "dateTimeContract",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "423:32:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_DateTime_$767",
+              "typeString": "contract DateTime"
+            },
+            "typeName": {
+              "contractScope": null,
+              "id": 1127,
+              "name": "DateTime",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 767,
+              "src": "423:8:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_DateTime_$767",
+                "typeString": "contract DateTime"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1130,
+            "name": "lastMintingAmount",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "460:32:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1129,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "460:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 1133,
+            "name": "lastMintingPeriod",
+            "nodeType": "VariableDeclaration",
+            "scope": 1208,
+            "src": "496:36:3",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 1131,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "496:7:3",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 1132,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "531:1:3",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1158,
+              "nodeType": "Block",
+              "src": "678:159:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1146,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1142,
+                      "name": "florestinhaToken",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1126,
+                      "src": "684:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                        "typeString": "contract FlorestinhaToken"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1144,
+                          "name": "_ownerContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1135,
+                          "src": "720:14:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1143,
+                        "name": "FlorestinhaToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1013,
+                        "src": "703:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_FlorestinhaToken_$1013_$",
+                          "typeString": "type(contract FlorestinhaToken)"
+                        }
+                      },
+                      "id": 1145,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "703:32:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                        "typeString": "contract FlorestinhaToken"
+                      }
+                    },
+                    "src": "684:51:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                      "typeString": "contract FlorestinhaToken"
+                    }
+                  },
+                  "id": 1147,
+                  "nodeType": "ExpressionStatement",
+                  "src": "684:51:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1150,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1148,
+                      "name": "lastMintingAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1130,
+                      "src": "741:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1149,
+                      "name": "_lastMintingAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1137,
+                      "src": "761:18:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "741:38:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1151,
+                  "nodeType": "ExpressionStatement",
+                  "src": "741:38:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1152,
+                      "name": "dateTimeContract",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1128,
+                      "src": "785:16:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DateTime_$767",
+                        "typeString": "contract DateTime"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 1154,
+                          "name": "_dateTimeContract",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1139,
+                          "src": "813:17:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                          }
+                        ],
+                        "id": 1153,
+                        "name": "DateTime",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 767,
+                        "src": "804:8:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_type$_t_contract$_DateTime_$767_$",
+                          "typeString": "type(contract DateTime)"
+                        }
+                      },
+                      "id": 1155,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "typeConversion",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "804:27:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_DateTime_$767",
+                        "typeString": "contract DateTime"
+                      }
+                    },
+                    "src": "785:46:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_DateTime_$767",
+                      "typeString": "contract DateTime"
+                    }
+                  },
+                  "id": 1157,
+                  "nodeType": "ExpressionStatement",
+                  "src": "785:46:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1159,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Minter",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1140,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1135,
+                  "name": "_ownerContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1159,
+                  "src": "554:22:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1134,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "554:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1137,
+                  "name": "_lastMintingAmount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1159,
+                  "src": "597:26:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1136,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "597:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 1139,
+                  "name": "_dateTimeContract",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1159,
+                  "src": "644:25:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 1138,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "644:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "553:117:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1141,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "678:0:3"
+            },
+            "scope": 1208,
+            "src": "537:300:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1170,
+              "nodeType": "Block",
+              "src": "947:50:3",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 1168,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 1166,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 1164,
+                        "name": "lastMintingAmount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1130,
+                        "src": "959:17:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "*",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "3130323935",
+                        "id": 1165,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "979:5:3",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_10295_by_1",
+                          "typeString": "int_const 10295"
+                        },
+                        "value": "10295"
+                      },
+                      "src": "959:25:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "/",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "3130303030",
+                      "id": 1167,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "987:5:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_10000_by_1",
+                        "typeString": "int_const 10000"
+                      },
+                      "value": "10000"
+                    },
+                    "src": "959:33:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "functionReturnParameters": 1163,
+                  "id": 1169,
+                  "nodeType": "Return",
+                  "src": "952:40:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1171,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": true,
+            "modifiers": [],
+            "name": "calculateMintAmount",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1160,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "908:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1163,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1162,
+                  "name": "amount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1171,
+                  "src": "932:14:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 1161,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "932:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "931:16:3"
+            },
+            "scope": 1208,
+            "src": "880:117:3",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 1206,
+              "nodeType": "Block",
+              "src": "1057:231:3",
+              "statements": [
+                {
+                  "assignments": [
+                    1179
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 1179,
+                      "name": "value",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 1207,
+                      "src": "1063:13:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 1178,
+                        "name": "uint256",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1063:7:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 1182,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 1180,
+                      "name": "calculateMintAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1171,
+                      "src": "1079:19:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$__$returns$_t_uint256_$",
+                        "typeString": "function () view returns (uint256)"
+                      }
+                    },
+                    "id": 1181,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1079:21:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1063:37:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 1186,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 1512,
+                          "src": "1138:3:3",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 1187,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "1138:10:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 1188,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1179,
+                        "src": "1150:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1183,
+                        "name": "florestinhaToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1126,
+                        "src": "1107:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                          "typeString": "contract FlorestinhaToken"
+                        }
+                      },
+                      "id": 1185,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "mintToAccount",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 996,
+                      "src": "1107:30:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_address_$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (address,uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 1189,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1107:49:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1190,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1107:49:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 1194,
+                        "name": "value",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1179,
+                        "src": "1200:5:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 1191,
+                        "name": "florestinhaToken",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1126,
+                        "src": "1162:16:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_FlorestinhaToken_$1013",
+                          "typeString": "contract FlorestinhaToken"
+                        }
+                      },
+                      "id": 1193,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "incrementTotalSupply",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 1012,
+                      "src": "1162:37:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_external_nonpayable$_t_uint256_$returns$_t_bool_$",
+                        "typeString": "function (uint256) external returns (bool)"
+                      }
+                    },
+                    "id": 1195,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1162:44:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 1196,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1162:44:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1199,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "id": 1197,
+                      "name": "lastMintingAmount",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1130,
+                      "src": "1215:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 1198,
+                      "name": "value",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1179,
+                      "src": "1235:5:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1215:25:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1200,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1215:25:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 1202,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1246:19:3",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 1201,
+                      "name": "lastMintingPeriod",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 1133,
+                      "src": "1246:17:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 1203,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1246:19:3"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "hexValue": "74727565",
+                    "id": 1204,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "1279:4:3",
+                    "subdenomination": null,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 1177,
+                  "id": 1205,
+                  "nodeType": "Return",
+                  "src": "1272:11:3"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 1207,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 1174,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 1173,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 1231,
+                  "src": "1017:9:3",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1017:9:3"
+              }
+            ],
+            "name": "mint",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 1172,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1014:2:3"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 1177,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 1176,
+                  "name": "success",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 1207,
+                  "src": "1043:12:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 1175,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1043:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1042:14:3"
+            },
+            "scope": 1208,
+            "src": "1001:287:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 1209,
+        "src": "350:940:3"
+      }
+    ],
+    "src": "113:1178:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.24+commit.e67f0147.Emscripten.clang"
+  },
   "networks": {},
-  "schema_version": "0.0.5",
-  "updated_at": 1498916762678
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-07-04T19:18:50.132Z"
 }

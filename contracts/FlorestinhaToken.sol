@@ -19,7 +19,7 @@ import "./Owned.sol";
 
 pragma solidity ^0.4.11;
 
-contract ProsperaToken is StandardToken, Owned {
+contract FlorestinhaToken is StandardToken, Owned {
 
     function () {
         //if ether is sent to this address, send it back.
@@ -40,7 +40,7 @@ contract ProsperaToken is StandardToken, Owned {
     string public version = '0.1';       //human 0.1 standard. Just an arbitrary versioning scheme.
 
 
-    function ProsperaToken(
+    function FlorestinhaToken(
         uint256 _initialAmount,
         string _tokenName,
         uint8 _decimalUnits,
@@ -77,7 +77,9 @@ contract ProsperaToken is StandardToken, Owned {
     }
 
 
-
+    /* Minter constructor params
+    "0x08970fed061e7747cd9a38d680a601510cb659fb", 36139470081, "0x9dd1e8169e76a9226b07ab9f85cc20a5e1ed44dd"
+    */
     address minterContract;
     event Mint(address indexed _account, uint256 _amount);
     
