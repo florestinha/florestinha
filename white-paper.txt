@@ -1,7 +1,7 @@
 INTRODUÇÃO
 O sítio Florestinha do Vale Verde é uma pequena propriedade familiar situada no Vale Verde, zona rural do município de Alto Paraíso de Goiás.
 
-Seus proprietários decidiram disponibilizar o espaço para anfitriar a realização do Projeto Florestinha do Vale Verde, um experimento de dimensões sociais, ambientais e tecnológicas que visa habilitar a regeneração do planeta através da agricultura sintrópica.
+Seus proprietários decidiram disponibilizar o espaço para anfitriar a realização do Projeto Florestinha do Vale Verde, um experimento de dimensões sociais, ambientais e tecnológicas que visa habilitar a regeneração do planeta através da agrofloresta.
 
  
 
@@ -51,7 +51,7 @@ As agroflorestas são um habilitador estratégico para o futuro que desejamos, p
 Leia mais: http://sitioflorestinha.com/agricultura-sintropica/
 
 O QUE ESTAMOS FAZENDO
-Nos organizamos a partir do fluxo das nossas interações, empoderados pelo propósito regenerativo e pela compreensão do que são as necessidades comuns do NÓS coletivo, dedicamos nossa atenção ao que é importante “no agora” e recebemos o retorno resultante da atividade econômica realizada.
+Nos organizamos a partir do fluxo das nossas interações, empoderados pelo propósito regenerativo e pela compreensão do que são as necessidades comuns do NÓS coletivo, dedicamos nossa atenção ao que é importante “no agora” e compartilhamos o resultado da atividade econômica realizada.
 
  
 
@@ -71,13 +71,6 @@ No início de outubro de 2017 semeamos aqui uma nova agrofloresta usando os prin
 
  
 
-ORGANIZAÇÃO PRÓSPERA
-A formação do coletivo se inspira no modelo organizacional distribuído desenhado por Oswaldo Oliveira, a Organização Próspera:
-
-http://www.organizacaoprospera.com/sobre/
-
- 
-
 INTERAÇÃO “NO AGORA”
 Colaboramos em torno das necessidades que identificamos durante a interação no campo de possibilidades da Florestinha do Vale Verde. Somente quem está presente, atento e interagente é capaz de compreender quais são as coisas mais importantes a se fazer "no agora".
 
@@ -88,7 +81,7 @@ Interagimos aqui para cuidar do desenvolvimento da nossa agrofloresta, manejando
  
 
 EQUILÍBRIO SISTÊMICO
-DesenvolveREmos atividades comerciais relacionadas a venda de alimentos e produtos originados na nossa agrofloresta e produção de experiências de contato e imersão em agricultura sintrópica e sobre como é possível se organizar de forma distribuída, com amigos e familiares, para criar uma nova agrofloresta e viver de forma próspera a partir deste fazer.
+Desenvolveremos atividades comerciais relacionadas a venda de alimentos e produtos originados na nossa agrofloresta e produção de experiências de contato e imersão agroflorestal e sobre como é possível se organizar com outras pessoas para criar uma nova agrofloresta e viver de forma próspera a partir deste fazer.
 
 Todo o excedente das receitas (lucro), abatidos os custos operacionais com insumos, produtos e serviços, bem como infra-estrutura de água, energia, internet e transporte, é distribuído com base na seguinte regra que visa o equilíbrio sistêmico do empreendimento como um todo:
 
@@ -123,50 +116,56 @@ Uma primeira emissão de 1000 FLORESTINHAS será distribuída para os iniciadore
 
 Anualmente serão emitidos novos FLORESTINHAS à razão de 50% sobre a base anterior resultando no exemplo a seguir:
 
-   - Durante o primeiro ano: 500 novos FLORESTINHAS (base anterior = 1000);
+- Durante o primeiro ano: 500 novos FLORESTINHAS. Base = 1000.
 
-   - Durante o segundo ano: 750 novos FLORESTINHAS (base anterior = 1500);
+- Durante o segundo ano: 750 novos FLORESTINHAS. Base = 1500.
 
-   - Durante o terceiro ano: 1125 novos FLORESTINHAS (base anterior = 2250);
+- Durante o terceiro ano: 1125 novos FLORESTINHAS. Base = 2250.
 
-   - e assim sucessivamente.
+- e assim sucessivamente.
 
 Novos FLORESTINHAS serão emitidos mensalmente seguindo a regra de emissão acima, o que resultará na emissão mensal aproximada de 2,95% da base.
 
-Os novos tokens serão distribuídos entre as pessoas que trabalharam em atividades do coletivo durante o mês anterior ao mês da emissão proporcionalmente à energia pessoal dedicada por cada um naquele período.
+Os novos tokens serão distribuídos entre as pessoas que trabalharam em atividades do coletivo durante o mês anterior ao mês da emissão proporcionalmente à energia pessoal dedicada por cada um à Florestinha naquele período.
 
  
 
-“ENERGIA”
-Usaremos outro token para representar o que chamaremos aqui de ENERGIA. Outros coletivos ou iniciativas poderão usar ENERGIA em seus processos.
+O PRAANA
+Usaremos outro token chamado PRAANA para representar a aplicação de um dia inteiro da atenção e energia pessoal de uma pessoa a uma causa. Outros coletivos ou iniciativas poderão usar PRAANA em seus processos.
 
-Qualquer um de nós co-criadores pode convidar pessoas para participar nas atividades coletivas da Florestinha do Vale Verde e, neste caso, pode emitir uma unidade de ENERGIA para cada dia de atenção e energia pessoal dedicada pelo convidado ao atendimento das necessidades COMUNS, em sua maioria relacionadas a plantar, manejar, colher, processar, vender e entregar produtos da nossa agrofloresta, produzir experiências como criptofogueiras, mutirões, vivências e cursos de agricultura sintrópica e cuidar dos bens comuns do sítio que foram disponibilizados para habilitar esta experiência.
+Qualquer um de nós co-criadores pode convidar pessoas para participar nas atividades coletivas da Florestinha do Vale Verde e, neste caso, pode emitir uma quantidade de PRAANA para cada dia de atenção e energia pessoal dedicada por cada convidado ao atendimento das necessidades COMUNS da Florestinha, em sua maioria relacionadas a plantar, manejar, colher, processar, vender e entregar produtos da nossa agrofloresta, produzir experiências como criptofogueiras, mutirões, vivências e cursos em agrofloresta e cuidar dos bens comuns do sítio que foram disponibilizados para habilitar esta experiência.
 
-Somente pessoas convidadas poderão receber ENERGIA da Florestinha. Quem convida decide, antes de fazer o convite, se o mesmo retornará em ENERGIA e mantém isto transparente para todos os envolvidos no fluxo das interações.
+Somente pessoas convidadas poderão receber PRAANA da Florestinha. Quem convida decide, antes de fazer o convite, se o mesmo retornará em PRAANA e mantém isto transparente para todos os envolvidos no fluxo das interações.
 
-O token será emitido sob demanda através do site da Florestinha do Vale Verde. Ele será a evidência objetiva e reconhecida de que a pessoa dedicou “energia” à Florestinha naquele dia.
-
- 
-
-NÃO HÁ TROCA. SOMENTE DISTRIBUIÇÃO.
-No início de cada novo mês um contrato inteligente ou smart contract, que é um programa de computador que instalamos na rede para automatizar este processo, executará um procedimento que irá: Emitir novos FLORESTINHAS em um total equivalente a 2,95% da base emitida até o momento;
-
-Distribuir os novos FLORESTINHAS para as carteiras que receberam ENERGIA da Florestinha no mês de referência proporcionalmente à quantidade de tokens depositados naquele mês.
-
-Um indivíduo pode receber ENERGIA emitida pela Florestinha do Vale Verde ou de qualquer outra iniciativa, podendo manter relações “energéticas” com múltiplos NÓS da rede.
-
-Neste documento descrevemos como a Florestinha do Vale Verde interage “energeticamente” em seu microecossistema.
+O convidado, ou seu anfitrião, emitirá as suas unidades de PRAANA ao final de um período de trabalho através de um aplicativo distribuído (DApp) que as depositará na PCD da Florestinha para contabilização. Esta será a evidência objetiva de que a pessoa dedicou “energia” à Florestinha naquele dia.
 
  
 
 POUPANÇA COLETIVA DISTRIBUÍDA (PCD)
 Oswaldo Oliveira batizou este conceito com o nome “Poupança Coletiva Distribuída”, ou simplesmente “PCD”. Codificamos na nossa PCD uma regra de distribuição que vigora enquanto o contrato estiver ativo na rede, ou seja, para sempre ou até ele ser extinto.
 
-A regra que escolhemos para realizar este experimento é de que setenta por cento do lucro resultante das operações comerciais da Florestinha do Vale Verde será distribuído para as carteiras que detém FLORESTINHAS proporcionalmente à quantidade destes em cada carteira e as pessoas receberão FLORESTINHAS com base na quantidade de ENERGIA dedicada ao nosso bem comum em cada mês.
+A regra que escolhemos para realizar este experimento é de que setenta por cento do lucro resultante das operações comerciais da Florestinha do Vale Verde será distribuído para as carteiras que detém FLORESTINHAS proporcionalmente à quantidade destes em cada carteira e as pessoas receberão mais FLORESTINHAS mensalmente proporcionalmente à quantidade de PRAANA depositada na PCD da Florestinha em cada mês.
 
 Toda a receita transferida para o endereço da carteira deste contrato inteligente será distribuído com base na regra codificada.
 
-NÓS indivíduos podemos, com o auxílio deste mecanismo da PCD, nos dedicar a um fazer coletivo enquanto o valor econômico compartilhado resultante das nossas interações é distribuído entre nós com base em uma regra clara, e que no caso da Florestinha do Vale Verde se baseia na quantidade de energia dedicada ao empenho no manejo agroflorestal e outras coisas que acontecem por aqui porque este é o fluxo de interações que desejamos aparelhar.
+NÓS indivíduos podemos, com o auxílio deste mecanismo da PCD, nos dedicar a um intento coletivo enquanto o valor econômico compartilhado resultante das nossas interações é distribuído entre nós com base em uma regra clara, e que no caso da Florestinha do Vale Verde se baseia na quantidade de energia dedicada ao empenho no manejo agroflorestal porque este é o fluxo de interações que desejamos "energizar".
+
+ 
+
+NÃO HÁ TROCA. SOMENTE DISTRIBUIÇÃO.
+No início de cada novo mês um contrato inteligente ou smart contract, que é um programa de computador que instalamos na rede para automatizar este processo, executará um procedimento que irá emitir novos FLORESTINHAS em um total equivalente a 2,95% da base emitida até o momento e distribuí-los para as pessoas que depositaram PRAANA na nossa PCD durante o mês de referência proporcionalmente à quantidade de tokens depositados no período.
+
+Um indivíduo pode receber PRAANA de uma ou mais iniciativas, podendo portanto manter relações “energéticas” com múltiplos NÓS da rede.
+
+ 
+
+COMO SE INTEGRAR AO EXPERIMENTO
+Qualquer pessoa pode se integrar ao experimento participando em nossos mutirões e outros tipos de eventos. Pessoas interessadas em se tornarem membros residentes da Florestinha devem entrar em contato com Dax Faulstich Diniz Reis para manifestar esta intenção e solicitar mais informações sobre a possibilidade da acolhida.
+
+ 
+
+DO ENCERRAMENTO DESTE EXPERIMENTO
+Aos proprietários do sítio Florestinha do Vale Verde, representados por Dax Faulstich Diniz Reis, se reserva o direito de encerrar o experimento em qualquer tempo, devendo neste caso os integrantes do coletivo desocuparem o espaço em período de até três meses contados a partir do registro da solicitação por e-mail enviado pelo representante dos proprietários para os integrantes residentes do coletivo Florestinha do Vale Verde, deixando intactos todos os recursos, ferramentas e instalações que compõem o experimento.
 
  
 
@@ -180,18 +179,14 @@ https://docs.google.com/spreadsheets/d/1A2QfQnh9gEJscTLbytwWaxogt3IiaXITGPPh-SkG
  
 
 VERSÃO DESTE DOCUMENTO
-Versão: 0.1 BETA
+Versão: 0.2 BETA
 
 Autor: Dax Faulstich Diniz Reis
 
-Data da publicação: 31 de maio de 2018
+Data da publicação: 9 de julho de 2018
 
  
 
 Controlamos as versões deste texto no GITHUB:
 
 https://github.com/florestinha/florestinha-token/blob/master/white-paper.txt
-
- 
-
-Esta é a primeira versão deste documento e tem por intenção servir como registro das regras de distribuição que serão codificadas nos programas que serão desenvolvidos para automatizar a distribuição.
